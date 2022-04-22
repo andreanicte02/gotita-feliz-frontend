@@ -2,8 +2,12 @@ import React from 'react'
 import { Container, Box, TextField, Avatar, Typography, Button } from '@mui/material'
 import InvertColorsSharpIcon from '@mui/icons-material/InvertColorsSharp';
 import Copyright from './Copyright';
-import { color } from '@mui/system';
+import {useNavigate} from "react-router-dom"
+;
+
 const Login = () => {
+
+  let navigate = useNavigate();
 
   const boxLogin ={
 
@@ -21,6 +25,11 @@ const Login = () => {
    
     component: 'main',
 
+  }
+
+  const onClickLogin = () =>{
+    navigate("/employee");
+ 
   }
 
   return (
@@ -78,6 +87,7 @@ const Login = () => {
               variant="contained"
               fullWidth
               sx={{mt:3}}
+              onClick={onClickLogin}
             >
               Ingresar
               
