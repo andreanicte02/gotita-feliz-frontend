@@ -6,6 +6,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import LeftBar from './LeftBar'
 import InvertColorsSharpIcon from '@mui/icons-material/InvertColorsSharp';
 import AccountCircleSharpIcon from '@mui/icons-material/AccountCircleSharp';
+import ListOtherItems from './ListOtherItems';
 
 const Dashboard = () => {
 
@@ -97,10 +98,11 @@ const Dashboard = () => {
                         <LeftBar />
                     </List>
 
-                    <Divider>
+                    <Divider/>
 
-
-                    </Divider>
+                    <List>
+                        <ListOtherItems/>
+                    </List>
 
                 </Drawer>
 
