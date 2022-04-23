@@ -4,7 +4,6 @@ import {
     ListItemIcon,
     ListItemText,
     List,
-    Box,
     Divider,
     Drawer,
     IconButton,
@@ -19,7 +18,7 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 
 const LeftBar = ({open, toggle}) => {
     return (
-        <Box
+        <
         >
             <Drawer open={open}>
                 <Toolbar>
@@ -93,7 +92,7 @@ const LeftBar = ({open, toggle}) => {
             </List>
 
             </Drawer>
-        </Box>
+        </>
     );
 };
 

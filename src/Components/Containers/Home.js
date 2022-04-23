@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import { Container, Box} from "@mui/material";
+import { Box} from "@mui/material";
 import NavBar from "./HomeComponets/NavBar"
 import LeftBar from "./HomeComponets/LeftBar";
 
@@ -14,13 +14,18 @@ const Home = () => {
 
 
     return (
+        <>
+            <Box>
 
-        <Box>
-            <NavBar open={open} toggle={toggleBar}></NavBar>
-            <LeftBar open={open} toggle={toggleBar}></LeftBar>
+                <NavBar open={open} toggle={toggleBar}></NavBar>
 
+            </Box>
 
-        </Box>
+            <Box>
+                <LeftBar open={open} toggle={toggleBar}></LeftBar>
+            </Box>
+
+        </>
 
     );
 };
