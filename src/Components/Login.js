@@ -28,7 +28,7 @@ const Login = () => {
   }
 
   const onClickLogin = () =>{
-    navigate("/employee");
+    navigate("/home");
  
   }
 
@@ -42,7 +42,7 @@ const Login = () => {
             <InvertColorsSharpIcon/>
           </Avatar>
 
-          <Typography component="h1" variant="h5">Gotita-Feliz</Typography>
+          <Typography component="h6" variant="h6" >Gotita-Feliz</Typography>
 
           <Box sx={{mt:1}}>
 

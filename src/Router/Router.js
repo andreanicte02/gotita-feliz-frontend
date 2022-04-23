@@ -1,6 +1,6 @@
 import React from 'react'
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import Employee from '../Components/Containers/Employee';
+import Home from '../Components/Containers/Home';
 import App from '../App';
 const Router = () => {
   return (
@@ -11,7 +11,7 @@ const Router = () => {
 
             <Route  path="/login" element={<App/>}/>
 
-            <Route  path="/employee" element={<Employee/>}/>
+            <Route  path="/home" element={<Home/>}/>
             
         </Routes>
     
