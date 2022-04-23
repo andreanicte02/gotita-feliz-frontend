@@ -24,7 +24,7 @@ const Dashboard = () => {
 
             <Box sx={{ display: 'flex' }}>
 
-                <AppBar position='absolute' open={flagOpenBar} >
+                <AppBar position='absolute' >
 
                     <Toolbar>
 
@@ -34,8 +34,6 @@ const Dashboard = () => {
                             aria-label="open drawer"
                             onClick={openBar}
                             sx={{
-
-
                                 ...(!flagOpenBar && { marginRight: '10px' }),
                                 ...(flagOpenBar && { marginRight: '180px' }),
                             }}
@@ -61,7 +59,7 @@ const Dashboard = () => {
 
                 </AppBar>
 
-                <Drawer variant="permanent" open={flagOpenBar}
+                <Drawer variant="permanent"
                     sx={{
                         ...(!flagOpenBar && { display: 'none' }),
 
@@ -74,8 +72,6 @@ const Dashboard = () => {
                             alignItems: 'center',
                             justifyContent: 'flex-end',
                             px: [1],
-
-
                         }}
 
                     >
