@@ -2,8 +2,12 @@ import React from 'react'
 import { Container, Box, TextField, Avatar, Typography, Button } from '@mui/material'
 import InvertColorsSharpIcon from '@mui/icons-material/InvertColorsSharp';
 import Copyright from './Copyright';
-import { color } from '@mui/system';
+import {useNavigate} from "react-router-dom"
+;
+
 const Login = () => {
+
+  let navigate = useNavigate();
 
   const boxLogin ={
 
@@ -23,6 +27,11 @@ const Login = () => {
 
   }
 
+  const onClickLogin = () =>{
+    navigate("/home");
+ 
+  }
+
   return (
     
     <Container sx={ containerFather }  maxWidth="xs">
@@ -33,7 +42,7 @@ const Login = () => {
             <InvertColorsSharpIcon/>
           </Avatar>
 
-          <Typography component="h1" variant="h5">Gotita-Feliz</Typography>
+          <Typography component="h6" variant="h6" >Gotita-Feliz</Typography>
 
           <Box sx={{mt:1}}>
 
@@ -78,6 +87,7 @@ const Login = () => {
               variant="contained"
               fullWidth
               sx={{mt:3}}
+              onClick={onClickLogin}
             >
               Ingresar
               
