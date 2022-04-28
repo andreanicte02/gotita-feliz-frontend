@@ -1,16 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import RegisterComponent from "./RegisterComponent";
+import Copyright from "../../Copyright";
 
 const ContentCentral = () => {
     return (
-        <div>
+        <>
+            <RegisterComponent></RegisterComponent>
 
-        </div>
+
+        </>
+
+
     );
 };
 
-ContentCentral.propTypes = {
 
-};
 
 export default ContentCentral;

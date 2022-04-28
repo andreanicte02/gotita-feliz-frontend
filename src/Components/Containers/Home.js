@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import {Box, Grid,} from "@mui/material";
+import {Box, } from "@mui/material";
 import NavBar from "./HomeComponets/NavBar"
 import LeftBar from "./HomeComponets/LeftBar";
 import ContentCentral from "./HomeComponets/ContentCentral";
@@ -23,6 +23,8 @@ const Home = () => {
 
             <LeftBar open={open} toggle={toggleBar}></LeftBar>
 
+
+            <ContentCentral></ContentCentral>
 
 
 

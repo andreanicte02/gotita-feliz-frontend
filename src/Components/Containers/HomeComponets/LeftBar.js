@@ -11,7 +11,6 @@ import {
 } from '@mui/material'
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import AssignmentIcon from "@mui/icons-material/Assignment";
-import BarChartIcon from "@mui/icons-material/BarChart";
 import LogoutSharpIcon from "@mui/icons-material/LogoutSharp";
 import AccountCircleSharpIcon from "@mui/icons-material/AccountCircleSharp";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
