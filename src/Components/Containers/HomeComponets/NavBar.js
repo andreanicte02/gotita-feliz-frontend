@@ -13,7 +13,7 @@ const NavBar = ({open,toggle}) => {
                     <MenuIcon sx={{color: "white"}}/>
                 </IconButton>
 
-                <Typography variant="h5" marginLeft={open?21:1} sx={{transition: "marginLeft 1s", color: "white"} }>
+                <Typography variant="h5" marginLeft={open?21:1} sx={{transition: "marginLeft 2", color: "white"} }>
                     Gotita Feliz
                 </Typography>
 

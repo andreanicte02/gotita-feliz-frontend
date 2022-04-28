@@ -7,7 +7,7 @@ import {
     Divider,
     Drawer,
     IconButton,
-    Typography, Toolbar, Icon
+    Typography, Toolbar, Icon,Box
 } from '@mui/material'
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import AssignmentIcon from "@mui/icons-material/Assignment";
@@ -18,8 +18,7 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 
 const LeftBar = ({open, toggle}) => {
     return (
-        <
-        >
+        <Box>
             <Drawer open={open}>
                 <Toolbar>
                     <Icon color="inherit">
@@ -37,14 +36,6 @@ const LeftBar = ({open, toggle}) => {
             <Divider/>
             <List>
 
-                <ListItemButton>
-
-                    <ListItemIcon>
-                        <DashboardIcon/>
-                    </ListItemIcon>
-                    <ListItemText primary="Dashboard"/>
-
-                </ListItemButton>
 
                 <ListItemButton>
 
@@ -68,11 +59,12 @@ const LeftBar = ({open, toggle}) => {
                 <ListItemButton>
 
                     <ListItemIcon>
-                        <BarChartIcon/>
+                        <DashboardIcon/>
                     </ListItemIcon>
-                    <ListItemText primary="Graficas"/>
+                    <ListItemText primary="Dashboard"/>
 
                 </ListItemButton>
+
 
 
             </List>
@@ -92,7 +84,7 @@ const LeftBar = ({open, toggle}) => {
             </List>
 
             </Drawer>
-        </>
+        </Box>
     );
 };
 

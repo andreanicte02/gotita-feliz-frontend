@@ -1,31 +1,34 @@
 import React, {useState} from 'react';
 
-import { Box} from "@mui/material";
+import {Box, Grid,} from "@mui/material";
 import NavBar from "./HomeComponets/NavBar"
 import LeftBar from "./HomeComponets/LeftBar";
+import ContentCentral from "./HomeComponets/ContentCentral";
 
 const Home = () => {
 
-    const [open,setOpen]=useState(false);
+    const [open, setOpen] = useState(false);
 
-    const toggleBar = () =>{
+    const toggleBar = () => {
         setOpen(!open)
     }
 
 
     return (
-        <>
-            <Box>
+        <Box maxWidth="xl" minWidth="xs">
 
-                <NavBar open={open} toggle={toggleBar}></NavBar>
 
-            </Box>
+            <NavBar open={open} toggle={toggleBar}></NavBar>
 
-            <Box>
-                <LeftBar open={open} toggle={toggleBar}></LeftBar>
-            </Box>
 
-        </>
+            <LeftBar open={open} toggle={toggleBar}></LeftBar>
+
+
+
+
+
+
+        </Box>
 
     );
 };
