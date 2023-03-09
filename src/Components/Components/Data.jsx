@@ -2,7 +2,7 @@ import {Title} from "./Title";
 import {Link, Table, TableBody, TableCell, TableHead, TableRow} from "@mui/material";
 
 function createData(id, date, name, shipTo, amount) {
-    return { id, date, name, shipTo, amount };
+    return {id, date, name, shipTo, amount};
 }
 
 const rows = [
@@ -34,7 +34,7 @@ function preventDefault(event) {
     event.preventDefault();
 }
 
-export const Registers = () => {
+export const Data = () => {
     return (
         <>
             <Title title={'Registro de material'}/>

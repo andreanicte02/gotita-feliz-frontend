@@ -2,9 +2,11 @@ import React, {useState} from 'react';
 
 import NavBar from "./HomeComponets/NavBar"
 import LeftBar from "./HomeComponets/LeftBar";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import { Route, Routes} from "react-router-dom";
 import {Dashboard} from "../Pages/Dashboard";
 import {Box} from "@mui/material";
+import {Register} from "../Pages/Register";
+
 
 const Home = () => {
 
@@ -29,6 +31,10 @@ const Home = () => {
                 <Routes>
 
                     <Route path="/" element={<Dashboard/>}/>
+
+                    <Route path="/dashboard" element={<Dashboard/>}/>
+
+                    <Route path="/register" element={<Register/>}/>
 
 
                 </Routes>

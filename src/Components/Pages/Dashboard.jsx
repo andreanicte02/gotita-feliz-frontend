@@ -2,11 +2,10 @@ import {useTheme} from '@mui/material/styles';
 import {Chart} from "../Components/Chart";
 import {Container, Grid, Paper} from "@mui/material";
 import {Deposits} from "../Components/Deposits";
-import {Registers} from "../Components/Registers";
+import {Data} from "../Components/Data";
 
 
 export const Dashboard = () => {
-    const theme = useTheme();
     return (
         <>
             <Container maxWidth="lg" sx={{mt: 4, mb: 4}}>
@@ -38,7 +37,7 @@ export const Dashboard = () => {
                 </Grid>
                 <Grid item xs={12}>
                     <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                        <Registers />
+                        <Data />
                     </Paper>
                 </Grid>
 

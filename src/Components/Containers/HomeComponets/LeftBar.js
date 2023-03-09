@@ -7,7 +7,7 @@ import {
     Divider,
     Drawer,
     IconButton,
-    Typography, Toolbar, Icon, Box
+    Typography, Icon, Box
 } from '@mui/material'
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import AssignmentIcon from "@mui/icons-material/Assignment";
@@ -50,7 +50,7 @@ const LeftBar = ({open, toggle}) => {
                     <ListItemIcon>
                         <DashboardIcon/>
                     </ListItemIcon>
-                    <ListItemText primary="Dashboard"/>
+                    <ListItemText primary="Dashboard"  onClick={()=>{navigate('/home/dashboard')}}/>
 
                 </ListItemButton>
 
@@ -59,7 +59,7 @@ const LeftBar = ({open, toggle}) => {
                     <ListItemIcon>
                         <AssignmentIcon/>
                     </ListItemIcon>
-                    <ListItemText primary="Registro"/>
+                    <ListItemText primary="Registro"  onClick={()=>{navigate('/home/register')}}/>
 
                 </ListItemButton>
             </List>
