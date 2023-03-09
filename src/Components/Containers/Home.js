@@ -1,28 +1,37 @@
 import React, {useState} from 'react';
 
-import { Box} from "@mui/material";
 import NavBar from "./HomeComponets/NavBar"
 import LeftBar from "./HomeComponets/LeftBar";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {Dashboard} from "../Pages/Dashboard";
+import {Box} from "@mui/material";
 
 const Home = () => {
 
-    const [open,setOpen]=useState(false);
+    const [open, setOpen] = useState(false);
 
-    const toggleBar = () =>{
+    const toggleBar = () => {
         setOpen(!open)
     }
 
 
     return (
         <>
-            <Box>
 
-                <NavBar open={open} toggle={toggleBar}></NavBar>
 
-            </Box>
+            <NavBar open={open} toggle={toggleBar}></NavBar>
 
-            <Box>
-                <LeftBar open={open} toggle={toggleBar}></LeftBar>
+
+            <LeftBar open={open} toggle={toggleBar}></LeftBar>
+
+
+            <Box paddingTop={10}>
+                <Routes>
+
+                    <Route path="/" element={<Dashboard/>}/>
+
+
+                </Routes>
             </Box>
 
         </>

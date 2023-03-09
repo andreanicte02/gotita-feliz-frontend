@@ -1,13 +1,12 @@
 import React from 'react';
-import { Box, Icon, IconButton, Toolbar, Typography} from "@mui/material";
+import {AppBar, Box, Icon, IconButton, Toolbar, Typography} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import InvertColorsSharpIcon from "@mui/icons-material/InvertColorsSharp";
-
+import InvertColorsIcon from '@mui/icons-material/InvertColors';
 
 const NavBar = ({open,toggle}) => {
 
     return (
-        <Box bgcolor={"#1565c0"} width={"100%"} height={60}>
+        <AppBar>
             <Toolbar>
                 <IconButton onClick={toggle}>
                     <MenuIcon sx={{color: "white"}}/>
@@ -18,11 +17,10 @@ const NavBar = ({open,toggle}) => {
                 </Typography>
 
                 <Icon color="inherit" sx={{marginLeft: "auto", color: "white"}}>
-                    <InvertColorsSharpIcon/>
+                    <InvertColorsIcon/>
                 </Icon>
-
             </Toolbar>
-        </Box>
+        </AppBar>
     );
 };
 

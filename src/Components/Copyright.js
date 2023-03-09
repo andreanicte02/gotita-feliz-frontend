@@ -2,7 +2,7 @@ import React from 'react'
 import { Typography } from '@mui/material'
 
 const margen={
-    mt: 10,
+    mt: 5,
     mb: 5
 }
 

@@ -7,33 +7,41 @@ import {
     Divider,
     Drawer,
     IconButton,
-    Typography, Toolbar, Icon
+    Typography, Toolbar, Icon, Box
 } from '@mui/material'
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import AssignmentIcon from "@mui/icons-material/Assignment";
-import BarChartIcon from "@mui/icons-material/BarChart";
 import LogoutSharpIcon from "@mui/icons-material/LogoutSharp";
 import AccountCircleSharpIcon from "@mui/icons-material/AccountCircleSharp";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import {useNavigate} from "react-router-dom";
 
 const LeftBar = ({open, toggle}) => {
+    const navigate = useNavigate();
+
     return (
-        <
-        >
-            <Drawer open={open}>
-                <Toolbar>
-                    <Icon color="inherit">
-                        <AccountCircleSharpIcon />
-                    </Icon>
 
-                    <Typography variant="h6">
-                        Empleado
-                    </Typography>
-                    <IconButton onClick={toggle}>
-                        <ChevronLeftIcon />
-                    </IconButton>
+        <Drawer open={open}>
 
-                </Toolbar>
+            <Box sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                border:20,
+                borderColor:'transparent'
+            }}>
+                <Icon sx={{paddingRight:2}}>
+                    <AccountCircleSharpIcon/>
+                </Icon>
+
+                <Typography variant="h6">
+                    Welcome!
+                </Typography>
+                <IconButton onClick={toggle}>
+                    <ChevronLeftIcon/>
+                </IconButton>
+            </Box>
+
             <Divider/>
             <List>
 
@@ -51,37 +59,16 @@ const LeftBar = ({open, toggle}) => {
                     <ListItemIcon>
                         <AssignmentIcon/>
                     </ListItemIcon>
-                    <ListItemText primary="Registrar-Bolsas"/>
+                    <ListItemText primary="Registro"/>
 
                 </ListItemButton>
-
-                <ListItemButton>
-
-                    <ListItemIcon>
-                        <AssignmentIcon/>
-                    </ListItemIcon>
-                    <ListItemText primary="Registrar-Tambos"/>
-
-                </ListItemButton>
-
-
-                <ListItemButton>
-
-                    <ListItemIcon>
-                        <BarChartIcon/>
-                    </ListItemIcon>
-                    <ListItemText primary="Graficas"/>
-
-                </ListItemButton>
-
-
             </List>
 
             <Divider/>
 
             <List>
 
-                <ListItemButton>
+                <ListItemButton onClick={()=>{navigate('/')}}>
 
                     <ListItemIcon>
                         <LogoutSharpIcon/>
@@ -91,11 +78,9 @@ const LeftBar = ({open, toggle}) => {
                 </ListItemButton>
             </List>
 
-            </Drawer>
-        </>
+        </Drawer>
     );
 };
-
 
 
 export default LeftBar;
